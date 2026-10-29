@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapi Barbershop & Salon – Potongan rapi, booking via WhatsApp</title>
+<meta name="description" content="Barbershop dan salon dengan barber berpengalaman. Lihat layanan dan harga, lalu booking langsung lewat WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e1626;--ink2:#18233a;--soft:#f2f4f8;--red:#d3263a;--blue:#1f4fd8;--muted:#5a6578;--line:#dfe3ea}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Oswald,"Arial Narrow",Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.05;margin:0}
+h2{font-size:clamp(2rem,5vw,3rem)}
+p{margin:0 0 1em}
+.pole{height:12px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,#fff 14px 28px,var(--blue) 28px 42px,#fff 42px 56px)}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;text-decoration:none;padding:14px 24px;border-radius:4px;border:2px solid var(--red);font-size:1rem;cursor:pointer;font-family:inherit}
+.btn:hover{background:#b81d2f;border-color:#b81d2f}
+.btn.ghost{background:transparent;border-color:#fff;color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #ffb800;outline-offset:2px}
+/* bar contoh desain: hapus saat diserahkan ke klien */
+.demo{background:#ffb800;color:var(--ink);text-align:center;font-size:.85rem;font-weight:600;padding:7px 12px}
+.demo a{text-decoration:underline}
+.nav{position:sticky;top:0;z-index:20;background:rgba(14,22,38,.96);color:#fff}
+.nb{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Oswald,sans-serif;font-weight:700;font-size:1.25rem;text-transform:uppercase}
+.pole-s{width:14px;height:34px;border-radius:7px;background:repeating-linear-gradient(135deg,var(--red) 0 6px,#fff 6px 12px,var(--blue) 12px 18px,#fff 18px 24px)}
+.nav nav{display:flex;gap:26px}
+.nav nav a{text-decoration:none;font-weight:500;font-size:.95rem;opacity:.85}
+.nav nav a:hover{opacity:1}
+.nav .btn{padding:9px 18px;font-size:.92rem}
+.hero{position:relative;min-height:76vh;display:flex;align-items:center;color:#fff;background:#0e1626 url("https://images.pexels.com/photos/7697233/pexels-photo-7697233.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,22,38,.82) 8%,rgba(14,22,38,.36) 55%,rgba(14,22,38,.05))}
+.hero .wrap{position:relative;padding-top:70px;padding-bottom:70px;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(3rem,9vw,6.2rem);max-width:9ch;text-transform:uppercase;font-family:Oswald,sans-serif}
+.hero p{max-width:46ch;font-size:1.15rem;margin:22px 0 28px;opacity:.92}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.info{background:var(--ink);color:#fff}
+.info .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.info div{padding:22px 20px;border-left:1px solid #2a3652}
+.info div:first-child{border-left:0;padding-left:0}
+.info b{display:block;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#ffb800;font-weight:500;font-size:.95rem}
+section{padding:80px 0}
+.two{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.two p{color:var(--muted);max-width:44ch}
+.why{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:14px}
+.why li{padding-left:18px;border-left:4px solid var(--red)}
+.why b{display:block}
+.menu{background:var(--ink);color:#fff;border-radius:6px;padding:34px 32px}
+.menu h3{font-size:1.4rem;color:#ffb800;margin:0 0 14px}
+.menu h3:not(:first-child){margin-top:30px}
+.row{display:flex;align-items:baseline;gap:10px;padding:7px 0}
+.row i{flex:1;border-bottom:2px dotted #4a5778}
+.row b{font-family:Oswald,sans-serif;font-weight:500;font-size:1.2rem;white-space:nowrap}
+.row small{display:block;color:#9aa6c0;font-size:.85rem}
+.note{font-size:.82rem;color:#9aa6c0;margin:22px 0 0}
+.gal-sec{background:var(--soft)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:10px;margin-top:30px}
+.gal div{overflow:hidden;border-radius:4px;background:#cfd5e0}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gal div:hover img{transform:scale(1.06)}
+.g1{grid-column:span 2;grid-row:span 2}.g4,.g5,.g6{grid-column:span 2}
+.book{position:relative;color:#fff;background:#0e1626 url("https://images.pexels.com/photos/7697642/pexels-photo-7697642.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover}
+.book::before{content:"";position:absolute;inset:0;background:rgba(14,22,38,.86)}
+.book .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.book p{opacity:.88;max-width:40ch}
+form{background:#fff;color:var(--ink);border-radius:6px;padding:28px;display:grid;gap:14px;grid-template-columns:1fr 1fr}
+form label{display:grid;gap:5px;font-weight:600;font-size:.9rem}
+form .full{grid-column:1/-1}
+input,select{font:inherit;padding:12px;border:1.5px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);width:100%}
+form .btn{grid-column:1/-1;text-align:center}
+.loc .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+table{border-collapse:collapse;width:100%}
+td{padding:9px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:600}
+footer{background:var(--ink);color:#9aa6c0;text-align:center;padding:30px 20px;font-size:.9rem}
+.polaroid{margin:0;background:#fff;color:var(--ink);padding:10px 10px 14px;border-radius:6px;transform:rotate(3deg);box-shadow:0 26px 50px -20px rgba(0,0,0,.65);max-width:340px;justify-self:end}
+.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#cfd5e0}
+.polaroid figcaption{font-family:Oswald,sans-serif;text-transform:uppercase;text-align:center;margin-top:10px;font-size:1rem}
+.side{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-top:28px;background:#cfd5e0}
+.band{position:relative;color:#fff;text-align:center;padding:120px 0;background:#0e1626 url("https://images.pexels.com/photos/7697648/pexels-photo-7697648.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover}
+.band::before{content:"";position:absolute;inset:0;background:rgba(14,22,38,.62)}
+.band .wrap{position:relative}
+.band h2{font-size:clamp(2.2rem,6vw,4rem)}
+.band p{max-width:46ch;margin:18px auto 26px;opacity:.92}
+@media (max-width:860px){
+ .two,.book .wrap,.loc .wrap{grid-template-columns:1fr;gap:34px}
+ .nav nav{display:none}
+ .info .wrap{grid-template-columns:1fr}
+ .info div{border-left:0;border-top:1px solid #2a3652;padding-left:0}
+ .info div:first-child{border-top:0}
+ .gal{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+ .g1,.g4,.g5,.g6{grid-column:span 2;grid-row:span 1}
+ section{padding:60px 0}
+}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.polaroid{display:none}.band{padding:84px 0}}
+@media (max-width:520px){form{grid-template-columns:1fr}.menu{padding:26px 20px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gal img{transition:none}}
+</style>
+</head>
+<body id="atas">
+<div class="demo">Contoh desain website barbershop oleh Labib Nashrulhaq. <a href="#" data-wa2="Halo kak Labib 🙏 Saya sudah lihat contoh desain barbershop dan tertarik dibuatkan website yang serupa untuk usaha saya. Boleh minta info paket dan estimasi waktunya ya kak? Terima kasih.">Mau website seperti ini?</a></div>
+
+<header class="nav"><div class="wrap nb">
+  <a class="logo" href="#atas"><span class="pole-s"></span><span data-nama>Rapi Barbershop</span></a>
+  <nav aria-label="Menu"><a href="#layanan">Layanan</a><a href="#galeri">Galeri</a><a href="#booking">Booking</a><a href="#lokasi">Lokasi</a></nav>
+  <a class="btn" href="#booking">Booking</a>
+</div></header>
+
+<main>
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div><h1>Potongan rapi. Percaya diri naik.</h1>
+    <p>Barbershop dan salon dengan barber berpengalaman. Pilih layanan, tentukan jam, lalu konfirmasi lewat WhatsApp tanpa antre lama.</p>
+    <div class="cta"><a class="btn" href="#booking">Booking sekarang</a><a class="btn ghost" href="#" data-wa="Halo {nama}, saya mau tanya layanan.">Chat WhatsApp</a></div></div>
+    <figure class="polaroid"><img src="https://images.pexels.com/photos/7697212/pexels-photo-7697212.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Barber merapikan rambut pelanggan" onerror="this.style.display='none'"><figcaption>Buka setiap hari 10.00–21.00</figcaption></figure>
+  </div>
+</section>
+<div class="pole"></div>
+<div class="info"><div class="wrap">
+  <div><b>Jam buka</b>Setiap hari 10.00–21.00</div>
+  <div><b>Alamat</b><span data-alamat>Jl. Contoh No. 12, Jakarta Selatan</span></div>
+  <div><b>Reservasi</b>Lewat WhatsApp, balasan cepat</div>
+</div></div>
+
+<section id="layanan">
+  <div class="wrap two">
+    <div>
+      <h2>Layanan dan harga</h2>
+      <p style="margin-top:16px">Harga jelas sebelum duduk di kursi. Tidak ada biaya tambahan yang tidak disebutkan.</p>
+      <!-- EDIT: ganti tiga poin ini sesuai keunggulan usaha klien -->
+      <ul class="why">
+        <li><b>Barber berpengalaman</b>Konsultasi model rambut sesuai bentuk wajah.</li>
+        <li><b>Peralatan bersih</b>Alat dirapikan dan dibersihkan untuk setiap pelanggan.</li>
+        <li><b>Booking mudah</b>Pilih jam lewat form, konfirmasi lewat WhatsApp.</li>
+      </ul>
+      <img class="side" src="https://images.pexels.com/photos/7697484/pexels-photo-7697484.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Suasana kursi barber" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <!-- EDIT: ganti layanan dan harga (harga di bawah hanya contoh) -->
+    <div class="menu">
+      <h3>Barbershop</h3>
+      <div class="row"><span>Potong rambut<small>Termasuk cuci dan tata</small></span><i></i><b>Rp 40.000</b></div>
+      <div class="row"><span>Cukur jenggot dan kumis</span><i></i><b>Rp 25.000</b></div>
+      <div class="row"><span>Potong + cukur<small>Paket hemat</small></span><i></i><b>Rp 60.000</b></div>
+      <div class="row"><span>Paket ayah dan anak</span><i></i><b>Rp 70.000</b></div>
+      <div class="row"><span>Semir rambut</span><i></i><b>Rp 90.000</b></div>
+      <h3>Salon</h3>
+      <div class="row"><span>Potong rambut wanita</span><i></i><b>Rp 60.000</b></div>
+      <div class="row"><span>Creambath</span><i></i><b>Rp 75.000</b></div>
+      <div class="row"><span>Hair coloring</span><i></i><b>mulai Rp 150.000</b></div>
+      <div class="row"><span>Smoothing</span><i></i><b>mulai Rp 250.000</b></div>
+      <p class="note">Harga contoh dan dapat berubah. Konfirmasi lewat WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<section id="galeri" class="gal-sec">
+  <div class="wrap">
+    <h2>Suasana dan hasil kerja</h2>
+    <!-- EDIT: ganti foto dengan foto asli barbershop klien -->
+    <div class="gal">
+      <div class="g1"><img src="https://images.pexels.com/photos/7697226/pexels-photo-7697226.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Barber memotong rambut pelanggan" loading="lazy"></div>
+      <div><img src="https://images.pexels.com/photos/7697222/pexels-photo-7697222.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Barber merapikan rambut" loading="lazy"></div>
+      <div><img src="https://images.pexels.com/photos/7697219/pexels-photo-7697219.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Barber menggunting rambut" loading="lazy"></div>
+      <div class="g4"><img src="https://images.pexels.com/photos/7697644/pexels-photo-7697644.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Barber memakai alat cukur" loading="lazy"></div>
+      <div class="g5"><img src="https://images.pexels.com/photos/7697275/pexels-photo-7697275.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Pelanggan sedang dipotong rambutnya" loading="lazy"></div>
+      <div class="g6"><img src="https://images.pexels.com/photos/7697645/pexels-photo-7697645.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Barber bersiap memotong rambut" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Rapi itu bukan soal gaya.<br>Rapi itu soal percaya diri.</h2>
+    <p>Datang dengan rambut yang sudah kamu bayangkan, pulang dengan hasil yang bikin kamu berani tampil.</p>
+    <a class="btn" href="#booking">Booking tempat</a>
+  </div>
+</section>
+<div class="pole"></div>
+<section id="booking" class="book">
+  <div class="wrap">
+    <div>
+      <h2>Booking tempat dalam semenit</h2>
+      <p style="margin-top:16px">Isi form, lalu kami buka WhatsApp dengan pesan yang sudah tersusun. Tinggal kirim, dan kami konfirmasi jamnya.</p>
+    </div>
+    <form id="f">
+      <label class="full">Nama<input name="nama" required autocomplete="name" placeholder="Nama kamu"></label>
+      <label class="full">Layanan
+        <select name="layanan" required>
+          <option>Potong rambut</option><option>Cukur jenggot dan kumis</option><option>Potong + cukur</option><option>Paket ayah dan anak</option><option>Semir rambut</option><option>Potong rambut wanita</option><option>Creambath</option><option>Hair coloring</option><option>Smoothing</option>
+        </select>
+      </label>
+      <label>Tanggal<input type="date" name="tgl" required></label>
+      <label>Jam<select name="jam" id="jam" required></select></label>
+      <button class="btn" type="submit">Kirim booking via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section id="lokasi" class="loc">
+  <div class="wrap">
+    <div>
+      <h2>Lokasi</h2>
+      <p style="margin-top:16px;color:var(--muted)" data-alamat>Jl. Contoh No. 12, Jakarta Selatan</p>
+      <p><a class="btn" href="#" id="maps" target="_blank" rel="noopener">Buka di Google Maps</a></p>
+    </div>
+    <div>
+      <h3 style="font-size:1.5rem;margin-bottom:10px">Jam buka</h3>
+      <table>
+        <tr><td>Senin sampai Jumat</td><td>10.00–21.00</td></tr>
+        <tr><td>Sabtu</td><td>09.00–22.00</td></tr>
+        <tr><td>Minggu</td><td>10.00–20.00</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr">2026</span> <span data-nama>Rapi Barbershop</span>. Semua hak dilindungi.</footer>
+
+<script>
+/* EDIT BAGIAN INI untuk klien: nama, nomor WhatsApp (format 62...), alamat */
+var C={nama:"Rapi Barbershop",wa:"6285720276493",alamat:"Jl. Contoh No. 12, Jakarta Selatan"};
+var wa=function(n,t){return "https://wa.me/"+n+"?text="+encodeURIComponent(t)};
+document.querySelectorAll("[data-nama]").forEach(function(e){e.textContent=C.nama});
+document.querySelectorAll("[data-alamat]").forEach(function(e){e.textContent=C.alamat});
+document.querySelectorAll("[data-wa]").forEach(function(a){a.href=wa(C.wa,a.dataset.wa.replace("{nama}",C.nama));a.target="_blank";a.rel="noopener"});
+document.querySelectorAll("[data-wa2]").forEach(function(a){a.href=wa("6285720276493",a.dataset.wa2);a.target="_blank";a.rel="noopener"});
+document.getElementById("maps").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(C.alamat);
+document.getElementById("yr").textContent=new Date().getFullYear();
+var j=document.getElementById("jam");
+for(var h=10;h<=20;h++){["00","30"].forEach(function(m){var o=document.createElement("option");o.textContent=(h<10?"0":"")+h+"."+m;j.appendChild(o)})}
+var f=document.getElementById("f");
+f.tgl.min=new Date(Date.now()-new Date().getTimezoneOffset()*60000).toISOString().slice(0,10);
+f.addEventListener("submit",function(e){
+  e.preventDefault();
+  var d=new Date(f.tgl.value+"T00:00:00").toLocaleDateString("id-ID",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+  var t="Halo "+C.nama+", saya "+f.nama.value+" mau booking "+f.layanan.value+" pada "+d+" jam "+f.jam.value+". Mohon konfirmasi ketersediaannya.";
+  window.open(wa(C.wa,t),"_blank","noopener");
+});
+</script>
+</body>
+</html>

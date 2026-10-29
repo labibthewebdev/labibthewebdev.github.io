@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Labib Nashrulhaq – Jasa Pembuatan Website untuk UMKM">
+<meta property="og:description" content="Landing page, company profile, dan katalog mulai Rp 499 ribu. Kontrak tertulis, garansi bug 14 hari.">
+<meta property="og:type" content="website">
+<title>Labib Nashrulhaq – Jasa Pembuatan Website untuk UMKM</title>
+<meta name="description" content="Landing page, company profile, dan katalog untuk UMKM dan bisnis lokal. Mulai Rp 499 ribu, selesai 3–5 hari, kontrak tertulis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--surface:#fff;--soft:#f0f5ef;--deep:#123c34;--ink:#15271f;--muted:#546a62;--line:#d9e4dc;
+  --brand:#123c34;--on-brand:#fff;--pop:#ffc83d;--on-pop:#123c34;--wa:#148043;--on-wa:#fff;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6.2vw,3.9rem);font-weight:800}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0 0 1em;max-width:62ch}
+section{padding:64px 0}
+.btn{display:inline-block;padding:14px 22px;border-radius:10px;font-weight:700;text-decoration:none;border:2px solid transparent;font-size:1rem;line-height:1.2}
+.btn-wa{background:var(--wa);color:var(--on-wa)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-brand{background:var(--brand);color:var(--on-brand)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #2f6fed;outline-offset:3px}
+.dark .btn:focus-visible,.dark a:focus-visible,.dark summary:focus-visible,.final a:focus-visible{outline-color:var(--pop)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px;gap:12px}
+.logo{font-weight:800;text-decoration:none;font-size:1.05rem}
+.hero{padding:36px 0 72px;background-image:radial-gradient(rgba(18,60,52,.09) 1px,transparent 1px);background-size:24px 24px}
+.visual{position:relative}
+.scene{display:block;width:100%;height:auto}
+.visual .ticket{margin:-42px 14px 0}
+.pro{padding:0 0 56px}
+.pro h3{margin-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--line);border-radius:99px;background:#fff;font-weight:600;font-size:.95rem}
+.chip span{font-size:1.2rem}
+.hero .wrap{display:grid;gap:40px;grid-template-columns:1.25fr 1fr;align-items:center}
+.hero p.lead{font-size:1.15rem;color:var(--muted)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.ticket{background-color:var(--deep);background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:20px 20px;color:#fff;border-radius:18px;padding:28px 26px;position:relative;transform:rotate(1.5deg);box-shadow:0 18px 40px -22px rgba(0,0,0,.5)}
+.ticket::before,.ticket::after{content:"";position:absolute;top:58%;width:26px;height:26px;border-radius:50%;background:var(--bg)}
+.ticket::before{left:-13px}.ticket::after{right:-13px}
+.ticket .tl{font-weight:700;font-size:.95rem}
+.ticket .was{display:block;margin-top:14px;text-decoration:line-through;font-weight:500;opacity:.75}
+.ticket .big{color:var(--pop);display:block;font-size:clamp(2.2rem,6vw,3rem);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.ticket hr{border:0;border-top:2px dashed rgba(255,255,255,.35);margin:20px 0 14px}
+.ticket .sm{font-size:.92rem;margin:0;font-weight:500}
+.dark{background-color:var(--deep);background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;color:#fff;--ink:#fff;--muted:#b8d1c6;--line:#2f5f52;--surface:#184a40}
+.soft{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pts{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:28px}
+.pts div{border-left:4px solid var(--pop);padding-left:16px}
+.pts p{margin:0;color:var(--muted)}
+.demos{display:grid;gap:18px;grid-template-columns:repeat(4,1fr);margin-top:28px}
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none}
+.shot{height:130px;display:block}
+.shot svg{display:block;width:100%;height:100%}
+.shot i{display:block;border-radius:4px;background:rgba(255,255,255,.55);height:10px}
+.shot i.b{height:36px;background:rgba(255,255,255,.3)}
+.shot i.s{width:55%}
+.d1{background:#1d5c63}.d2{background:#b8512f}.d3{background:#4a4fa3}.d4{background:#22272f}
+.demo .tx{padding:14px 16px 16px}
+.demo h3{margin:0 0 4px;font-size:1rem}
+.demo p{margin:0;font-size:.88rem;color:var(--muted)}
+.tag{display:inline-block;margin-top:8px;font-size:.78rem;font-weight:700;padding:3px 9px;border-radius:99px;background:var(--bg);border:1px solid var(--line)}
+.pk{display:grid;gap:20px;grid-template-columns:repeat(3,1fr);margin-top:28px;align-items:stretch}
+.pkg{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column}
+.pkg.hot{border:3px solid var(--brand)}
+.pkg .for{color:var(--muted);font-size:.93rem;min-height:3em}
+.pr .was{display:block;text-decoration:line-through;color:var(--muted);font-size:.95rem}
+.pr .price{font-size:1.9rem;font-weight:800;letter-spacing:-.02em}
+.pkg ul{padding-left:20px;margin:16px 0;flex:1}
+.pkg li{margin-bottom:6px}
+.meta{font-size:.9rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-bottom:16px}
+.meta b{color:var(--ink)}
+.note{margin-top:24px;padding:18px 20px;border:1px dashed var(--line);border-radius:12px;background:var(--surface)}
+.note p{margin:0 0 .5em}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:28px 0 0;display:grid;gap:20px;grid-template-columns:repeat(4,1fr)}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--brand);color:var(--on-brand);font-weight:800;margin-bottom:10px}
+.steps p{margin:0;color:var(--muted);font-size:.93rem}
+.terms{display:grid;gap:12px 40px;grid-template-columns:1fr 1fr;padding:0;list-style:none;margin:24px 0 0}
+.terms li{padding-left:26px;position:relative}
+.terms li::before{content:"✓";position:absolute;left:0;font-weight:800;color:var(--pop)}
+.about{display:grid;gap:28px;grid-template-columns:auto 1fr;align-items:center}
+.mono{width:96px;height:96px;border-radius:50%;background:var(--brand);color:var(--on-brand);display:grid;place-items:center;font-weight:800;font-size:2rem}
+.final{background-color:var(--deep);background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;color:#fff;text-align:center;border-radius:20px;padding:48px 24px}
+.final p{margin-left:auto;margin-right:auto}
+.final .btn-wa{background:var(--pop);color:var(--on-pop)}
+.final a.mail{color:inherit}
+footer{padding:36px 0 110px;color:var(--muted);font-size:.9rem;text-align:center}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;background:var(--wa);color:var(--on-wa);border-radius:99px;padding:14px 20px;font-weight:800;text-decoration:none;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.expired .promo-only{display:none!important}
+
+.photo{margin:0;position:relative;border-radius:24px;overflow:hidden;background:#cfe0d4;aspect-ratio:4/3}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.chat{position:absolute;left:14px;top:14px;max-width:70%;background:#fff;color:#15271f;padding:10px 14px;border-radius:14px 14px 14px 4px;font-weight:700;font-size:.9rem;line-height:1.35;box-shadow:0 8px 20px -10px rgba(0,0,0,.5)}
+.chat.r{left:auto;right:14px;top:auto;bottom:58px;background:#d9fdd3;border-radius:14px 14px 4px 14px}
+.shot{height:150px;background:#dfe8e2}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.problem{background-image:linear-gradient(rgba(18,60,52,.9),rgba(18,60,52,.9)),url("https://images.pexels.com/photos/2159108/pexels-photo-2159108.jpeg?auto=compress&cs=tinysrgb&w=1400");background-size:cover;background-position:center}
+.final{background-image:linear-gradient(rgba(18,60,52,.88),rgba(18,60,52,.88)),url("https://images.pexels.com/photos/1233530/pexels-photo-1233530.jpeg?auto=compress&cs=tinysrgb&w=1400");background-size:cover;background-position:center}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:rgba(255,255,255,.92);z-index:40}
+.topbar{background:var(--deep);color:#fff;text-align:center;font-size:.9rem;font-weight:600;padding:9px 14px}
+.topbar b{color:var(--pop)}
+.nav{display:flex;gap:26px}
+.nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:#e6f0e8;right:-140px;top:-120px}
+.hero::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:#ffe9a8;left:-50px;bottom:30px}
+.hero .wrap{position:relative;z-index:1}
+.trust{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-weight:600;font-size:.92rem}
+.trust li::before{content:"✓ ";color:var(--wa);font-weight:800}
+.btn-wa{box-shadow:0 12px 22px -14px rgba(20,128,67,.9)}
+section h2::after{content:"";display:block;width:52px;height:5px;border-radius:3px;background:var(--pop);margin-top:12px}
+.final h2::after{margin-left:auto;margin-right:auto}
+.warm{background:#fff8e6}
+.dark{margin:0 14px;border-radius:28px}
+.pkg,.demo,.steps li{box-shadow:0 1px 2px rgba(18,60,52,.06),0 14px 30px -20px rgba(18,60,52,.4)}
+.pkg.hot{position:relative}
+.pkg.hot::before{content:"Paling cepat jadi";position:absolute;top:-14px;left:22px;background:var(--pop);color:var(--on-pop);font-weight:800;font-size:.8rem;padding:4px 12px;border-radius:99px}
+.steps li{position:relative;background:var(--soft);border-color:transparent;border-radius:18px}
+.steps li::before{background:var(--pop);color:var(--on-pop)}
+.chip{box-shadow:0 8px 18px -14px rgba(18,60,52,.5)}
+#faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:2px 18px;margin-bottom:10px}
+.about{background:var(--soft);border-radius:28px;padding:32px}
+@media (min-width:861px){.steps li:not(:last-child)::after{content:"";position:absolute;top:38px;right:-21px;width:21px;border-top:2px dashed #b9cdbf}}
+@media (prefers-reduced-motion:no-preference){
+  .pkg,.demo{transition:transform .2s ease,box-shadow .2s ease}
+  .pkg:hover,.demo:hover{transform:translateY(-4px)}
+  .demo img{transition:transform .35s ease}
+  .demo:hover img{transform:scale(1.05)}
+}
+.demo .shot{overflow:hidden}
+@media (max-width:700px){.nav{display:none}}
+@media (max-width:520px){.dark{margin:0 8px;border-radius:22px}.about{padding:22px}}
+.demo{font:inherit;color:inherit;text-align:left;cursor:pointer;padding:0;width:100%}
+.demo .go{display:inline-block;margin:8px 0 0 10px;font-weight:800;font-size:.85rem;text-decoration:underline;text-underline-offset:3px}
+.pkg{position:relative}
+.pkg h3{padding-right:78px}
+.corner{position:absolute;top:-1px;right:-1px;background:var(--pop);color:var(--on-pop);text-align:center;padding:9px 15px 8px;border-radius:0 16px 0 16px;font-weight:800;font-size:1.4rem;line-height:1.05;box-shadow:0 8px 16px -10px rgba(18,60,52,.7)}
+.corner small{display:block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+.pkg.hot .corner{top:-3px;right:-3px;border-radius:0 13px 0 16px}
+.pr .save{display:block;color:var(--wa);font-weight:800;font-size:.9rem;margin-top:2px}
+html.lock{overflow:hidden}
+#demoDlg{width:100vw;max-width:none;height:100vh;height:100dvh;max-height:none;border:0;padding:0;margin:0;inset:0;background:#232a38;color:#fff}
+#demoDlg[open]{display:flex;flex-direction:column}
+#demoDlg::backdrop{background:rgba(0,0,0,.8)}
+.dbar{display:flex;align-items:center;gap:12px;padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top,0px));background:var(--deep)}
+.dbar strong{flex:1;font-size:.98rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dsw{display:flex;border:1px solid rgba(255,255,255,.4);border-radius:8px;overflow:hidden}
+.dsw button{background:transparent;color:#fff;border:0;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer}
+.dsw button[aria-pressed="true"]{background:var(--pop);color:var(--on-pop)}
+#dWa{padding:9px 14px;font-size:.9rem}
+.dx{background:#fff;color:var(--deep);border:0;border-radius:8px;padding:9px 16px;font:inherit;font-weight:800;cursor:pointer}
+.dview{flex:1;min-height:0;display:flex;justify-content:center;background:#2f3748}
+.dframe{width:100%;height:100%;background:#fff}
+.dframe iframe{width:100%;height:100%;border:0;display:block;background:#fff}
+.dview.m{padding:14px 0}
+.dview.m .dframe{width:390px;max-width:100%;border-radius:24px;overflow:hidden;border:6px solid #0b1220}
+@media (max-width:640px){.dsw,#dWa{display:none}.dview.m{padding:0}}
+header{transition:box-shadow .25s ease}
+header.scrolled{box-shadow:0 10px 26px -18px rgba(18,60,52,.55)}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.js .rv.in{opacity:1;transform:none}
+.js h2.rv::after{width:0;transition:width .7s ease .3s}
+.js h2.rv.in::after{width:52px}
+@keyframes naik{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes masuk{from{opacity:0;transform:translateX(34px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes buka{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .js .hero .wrap > div:first-child > *{animation:naik .8s cubic-bezier(.2,.7,.2,1) backwards}
+  .js .hero .wrap > div:first-child > :nth-child(1){animation-delay:.05s}
+  .js .hero .wrap > div:first-child > :nth-child(2){animation-delay:.18s}
+  .js .hero .wrap > div:first-child > :nth-child(3){animation-delay:.3s}
+  .js .hero .wrap > div:first-child > :nth-child(4){animation-delay:.42s}
+  .js .hero .visual{animation:masuk .9s cubic-bezier(.2,.7,.2,1) .2s backwards}
+  .btn{transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  details[open] > p{animation:buka .3s ease}
+}
+@media (max-width:860px){
+  .hero .wrap,.about{grid-template-columns:1fr}
+  .pts,.pk{grid-template-columns:1fr}
+  .demos,.steps,.terms{grid-template-columns:1fr 1fr}
+  .ticket{transform:none}
+}
+@media (max-width:520px){
+  .demos,.steps,.terms{grid-template-columns:1fr}
+  section{padding:48px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+<script>if("IntersectionObserver" in window&&!matchMedia("(prefers-reduced-motion:reduce)").matches)document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<div class="topbar promo-only">Promo Landing Page <b>Rp 499 ribu</b> sampai 25 November 2026. Sisa slot: <b class="slots">10</b> dari 10.</div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#atas">Labib Nashrulhaq</a>
+    <nav class="nav" aria-label="Menu"><a href="#contoh">Contoh</a><a href="#paket">Paket</a><a href="#cara">Cara kerja</a><a href="#faq">FAQ</a></nav>
+    <a class="btn btn-line" href="https://wa.me/6285720276493?text=Halo%20kak%20Labib%20%F0%9F%99%8F%20Saya%20sudah%20lihat%20website%20kakak%20dan%20ingin%20bertanya%20soal%20pembuatan%20website%20untuk%20usaha%20saya.%20Boleh%20dibantu%20ya%20kak%3F%20Nanti%20saya%20ceritakan%20usahanya.%20Terima%20kasih." data-wa="umum" style="padding:10px 16px">Chat WhatsApp</a>
+  </div>
+</header>
+
+<main id="atas">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Website untuk bisnismu, mulai <span class="price" data-n="Rp 800 ribu" data-p="Rp 499 ribu">Rp 499 ribu</span>.</h1>
+      <p class="lead">Landing page, company profile, dan katalog untuk UMKM dan bisnis lokal. Selesai dalam 3–5 hari untuk landing page, dengan kontrak tertulis sebelum mulai.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/6285720276493?text=Halo%20kak%20Labib%20%F0%9F%99%8F%20Saya%20sudah%20lihat%20website%20kakak%20dan%20ingin%20bertanya%20soal%20pembuatan%20website%20untuk%20usaha%20saya.%20Boleh%20dibantu%20ya%20kak%3F%20Nanti%20saya%20ceritakan%20usahanya.%20Terima%20kasih." data-wa="umum">Chat di WhatsApp</a>
+        <a class="btn btn-line" href="#paket">Lihat paket</a>
+      </div>
+      <ul class="trust"><li>Landing page 3–5 hari</li><li>Garansi bug 14 hari</li><li>Kontrak tertulis</li></ul>
+    </div>
+    <div class="visual"><figure class="photo">
+<img src="https://images.pexels.com/photos/10497545/pexels-photo-10497545.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Pemilik kedai kopi menuang kopi di balik meja" width="900" height="600" decoding="async" onerror="this.style.display='none'">
+<div class="chat">Halo, buka jam berapa?</div>
+<div class="chat r">Buka 08.00–21.00, silakan mampir!</div>
+</figure>
+<aside class="ticket promo-only" aria-label="Promo">
+      <div class="tl">Promo sampai 25 November 2026</div>
+      <span class="was">Rp 800.000</span>
+      <span class="big">Rp 499.000</span>
+      <div class="tl">Paket Landing Page, hemat 37%</div>
+      <hr>
+      <p class="sm">Untuk 10 klien tercepat (dihitung dari DP). Sisa slot: <b class="slots">10</b> dari 10.</p>
+    </aside></div>
+  </div>
+</section>
+
+<section class="pro"><div class="wrap">
+<h3>Cocok untuk usaha seperti</h3>
+<div class="chips">
+<div class="chip">Kedai dan kuliner</div><div class="chip">Salon dan barbershop</div><div class="chip">Properti</div><div class="chip">Laundry dan jasa</div><div class="chip">Butik dan toko</div><div class="chip">Bengkel dan servis</div>
+</div></div></section>
+
+<section class="problem dark">
+  <div class="wrap">
+    <h2>Pelanggan mengecek dulu sebelum menghubungimu</h2>
+    <div class="pts">
+      <div><h3>Mereka mencari di Google dan Instagram</h3><p>Bisnis tanpa halaman yang jelas gampang terlewat.</p></div>
+      <div><h3>Mereka butuh yakin</h3><p>Foto, harga, lokasi, dan jam buka dalam satu halaman membuat mereka berani bertanya.</p></div>
+      <div><h3>Mereka ingin langsung chat</h3><p>Setiap halaman punya tombol WhatsApp, jadi pesanan masuk ke ponselmu.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contoh" class="warm">
+  <div class="wrap">
+    <h2>Contoh tampilan</h2>
+    <p>Klik salah satu contoh untuk membukanya langsung di halaman ini, tanpa pindah tab. Kamu bisa melihat tampilan desktop dan HP.</p>
+    <div class="demos">
+      <button class="demo" type="button" data-demo="demo/barbershop.html" data-title="Salon dan barbershop" aria-haspopup="dialog"><div class="shot"><img src="https://images.pexels.com/photos/7697233/pexels-photo-7697233.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Barber memotong rambut pelanggan di barbershop" width="600" height="400" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><div class="tx"><h3>Salon dan barbershop</h3><p>Daftar layanan, harga, dan tombol booking via WhatsApp.</p><span class="tag">Contoh desain</span><span class="go">Buka demo</span></div></button>
+      <button class="demo" type="button" data-demo="demo/kuliner.html" data-title="Kuliner dan rumah makan" aria-haspopup="dialog"><div class="shot"><img src="https://images.pexels.com/photos/37109660/pexels-photo-37109660/free-photo-of-padang-cuisine-display-in-jakarta-restaurant.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hidangan masakan Padang di rumah makan" width="600" height="400" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><div class="tx"><h3>Kuliner</h3><p>Menu bergambar, lokasi di peta, dan pesan lewat WhatsApp.</p><span class="tag">Contoh desain</span><span class="go">Buka demo</span></div></button>
+      <button class="demo" type="button" data-demo="demo/properti.html" data-title="Properti" aria-haspopup="dialog"><div class="shot"><img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Rumah dua lantai dengan halaman" width="600" height="400" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><div class="tx"><h3>Properti</h3><p>Katalog unit dengan filter dan WhatsApp per unit.</p><span class="tag">Contoh desain</span><span class="go">Buka demo</span></div></button>
+      <a class="demo" href="https://luxury-car-autos.vercel.app" target="_blank" rel="noopener"><div class="shot"><img src="https://images.pexels.com/photos/2475808/pexels-photo-2475808.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mobil sport di ruang pamer" width="600" height="400" loading="lazy" decoding="async" onerror="this.style.display='none'"></div><div class="tx"><h3>Luxury Autos</h3><p>Katalog 12 mobil dengan filter dan form pertanyaan. Buka situsnya.</p><span class="tag">Proyek portofolio</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="paket" class="soft">
+  <div class="wrap">
+    <h2>Pilih paket, harga jelas di depan</h2>
+    <p class="promo-only">Harga promo berlaku sampai 25 November 2026 atau sampai 10 klien terpenuhi, mana yang lebih dulu.</p>
+    <div class="pk">
+      <article class="pkg hot">
+        <span class="corner promo-only" aria-label="Diskon 37 persen"><small>Promo</small>-37%</span>
+        <h3>Landing Page</h3>
+        <p class="for">Untuk satu produk, promo, atau usaha yang butuh halaman cepat.</p>
+        <div class="pr"><s class="was promo-only">Rp 800.000</s><span class="price" data-n="Rp 800.000" data-p="Rp 499.000">Rp 499.000</span><small class="save promo-only">Hemat Rp 301.000</small></div>
+        <ul><li>1 halaman responsif</li><li>Tombol WhatsApp</li><li>Form kontak</li><li>Pemasangan domain dan hosting</li><li>SEO dasar</li></ul>
+        <div class="meta"><b>3–5 hari</b>, revisi 2x<br>Bayar 50% DP, 50% pelunasan sebelum serah terima</div>
+        <a class="btn btn-wa" href="https://wa.me/6285720276493?text=Halo%20kak%20Labib%20%F0%9F%99%8F%20Saya%20tertarik%20dengan%20paket%20Landing%20Page%20%28promo%20Rp%20499.000%29%20yang%20ada%20di%20website.%20Boleh%20minta%20info%20lebih%20lanjut%20dan%20cara%20pemesanannya%20ya%20kak%3F%20Nanti%20saya%20ceritakan%20usahanya.%20Terima%20kasih." data-wa="lp">Pilih Landing Page</a>
+      </article>
+      <article class="pkg">
+        <span class="corner promo-only" aria-label="Diskon 35 persen"><small>Promo</small>-35%</span>
+        <h3>Company Profile</h3>
+        <p class="for">Untuk usaha yang butuh tampil profesional dengan beberapa halaman.</p>
+        <div class="pr"><s class="was promo-only">Rp 2.000.000</s><span class="price" data-n="Rp 2.000.000" data-p="Rp 1.290.000">Rp 1.290.000</span><small class="save promo-only">Hemat Rp 710.000</small></div>
+        <ul><li>3–5 halaman</li><li>Galeri foto</li><li>Peta lokasi</li><li>Tombol WhatsApp</li><li>SEO dasar</li></ul>
+        <div class="meta"><b>7–10 hari</b>, revisi 3x<br>Bayar 30% kontrak, 30% preview, 40% sebelum serah terima</div>
+        <a class="btn btn-brand" href="https://wa.me/6285720276493?text=Halo%20kak%20Labib%20%F0%9F%99%8F%20Saya%20tertarik%20dengan%20paket%20Company%20Profile%20%28promo%20Rp%201.290.000%29%20yang%20ada%20di%20website.%20Boleh%20minta%20info%20lebih%20lanjut%20dan%20cara%20pemesanannya%20ya%20kak%3F%20Nanti%20saya%20ceritakan%20usahanya.%20Terima%20kasih." data-wa="cp">Pilih Company Profile</a>
+      </article>
+      <article class="pkg">
+        <span class="corner promo-only" aria-label="Diskon 28 persen"><small>Promo</small>-28%</span>
+        <h3>Katalog / Properti</h3>
+        <p class="for">Untuk usaha dengan banyak produk atau unit yang ingin dipamerkan.</p>
+        <div class="pr"><s class="was promo-only">Rp 3.500.000</s><span class="price" data-n="Rp 3.500.000" data-p="Rp 2.490.000">Rp 2.490.000</span><small class="save promo-only">Hemat Rp 1.010.000</small></div>
+        <ul><li>Hingga 20 item</li><li>Halaman detail per item</li><li>Filter</li><li>WhatsApp per item</li><li>Tanpa admin panel</li></ul>
+        <div class="meta"><b>10–14 hari</b>, revisi 3x<br>Bayar 30% kontrak, 30% preview, 40% sebelum serah terima</div>
+        <a class="btn btn-brand" href="https://wa.me/6285720276493?text=Halo%20kak%20Labib%20%F0%9F%99%8F%20Saya%20tertarik%20dengan%20paket%20Katalog%2FProperti%20%28promo%20Rp%202.490.000%29%20yang%20ada%20di%20website.%20Boleh%20minta%20info%20lebih%20lanjut%20dan%20cara%20pemesanannya%20ya%20kak%3F%20Nanti%20saya%20ceritakan%20usahanya.%20Terima%20kasih." data-wa="kat">Pilih Katalog</a>
+      </article>
+    </div>
+    <div class="note">
+      <p><b>Butuh toko online, admin panel, atau chatbot AI?</b> Konsultasi dulu, harga disesuaikan kebutuhan. Admin panel mulai Rp 6 juta, web dengan AI atau chatbot mulai Rp 10 juta.</p>
+      <details><summary>Tambahan dan perawatan</summary>
+        <p>Desain custom +20–30%. Integrasi API +Rp 0,5–2 juta. Pengerjaan kilat +25–50%. Revisi tidak terbatas +Rp 0,5–1 juta. Perawatan bulanan Rp 150.000 (domain dan hosting) atau Rp 300.000 (penuh), dibayar di muka tiap bulan.</p>
+      </details>
+      <p style="margin:12px 0 0"><a class="btn btn-wa" href="https://wa.me/6285720276493?text=Halo%20kak%20Labib%20%F0%9F%99%8F%20Saya%20ingin%20berkonsultasi%20untuk%20website%20yang%20lebih%20lengkap%20%28misalnya%20toko%20online%2C%20admin%20panel%2C%20atau%20chatbot%20AI%29.%20Boleh%20dibantu%20ya%20kak%3F%20Nanti%20saya%20jelaskan%20kebutuhannya.%20Terima%20kasih." data-wa="konsul">Konsultasi lewat WhatsApp</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="cara">
+  <div class="wrap">
+    <h2>Cara kerja</h2>
+    <ol class="steps">
+      <li><h3>Brief</h3><p>Kamu ceritakan usaha, tujuan, dan contoh desain yang kamu suka.</p></li>
+      <li><h3>Penawaran dan kontrak</h3><p>Saya kirim harga, fitur, dan jadwal. Kontrak tertulis sebelum mulai kerja.</p></li>
+      <li><h3>Pengerjaan dan preview</h3><p>Kamu lihat hasilnya sebelum final, lalu revisi sesuai jatah paket.</p></li>
+      <li><h3>Pelunasan dan serah terima</h3><p>Setelah pelunasan, akses domain, hosting, dan file diserahkan.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="promo-only dark">
+  <div class="wrap">
+    <h2>Syarat promo dan jaminan</h2>
+    <ul class="terms">
+      <li>Promo sampai 25 November 2026 untuk 10 klien tercepat, dihitung dari DP yang diterima.</li>
+      <li>Harga promo terkunci jika DP masuk sebelum batas promo, pengerjaan boleh selesai sesudahnya.</li>
+      <li>Hasil boleh dipakai sebagai portofolio, dan kamu memberi ulasan jujur (tidak harus bintang lima).</li>
+      <li>Garansi perbaikan bug 14 hari setelah website tayang.</li>
+      <li>Serah terima setelah pelunasan diterima.</li>
+      <li>DP tidak dikembalikan setelah pengerjaan dimulai.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="faq" class="soft">
+  <div class="wrap" style="max-width:760px">
+    <h2>Pertanyaan yang sering muncul</h2>
+    <details><summary>Siapa yang membayar domain?</summary><p>Domain dibayar klien. Perkiraan Rp 150–250 ribu per tahun, angkanya bisa berbeda di tiap penyedia. Saya bantu memasangnya.</p></details>
+    <details><summary>Berapa kali bisa revisi?</summary><p>Landing Page 2x revisi, Company Profile dan Katalog 3x revisi. Kalau butuh lebih, ada tambahan revisi tidak terbatas.</p></details>
+    <details><summary>Apa yang perlu saya siapkan?</summary><p>Nama usaha, logo kalau ada, foto produk atau tempat, daftar layanan atau produk beserta harga, dan nomor WhatsApp yang dipakai.</p></details>
+    <details><summary>Bagaimana kalau ada yang error setelah tayang?</summary><p>Ada garansi perbaikan bug 14 hari setelah website tayang. Sesudahnya tersedia paket perawatan bulanan.</p></details>
+    <details><summary>Bisakah saya mengubah isi website nanti?</summary><p>Bisa lewat permintaan ke saya atau paket perawatan. Paket Katalog tidak memakai admin panel, jadi perubahan item dilakukan oleh saya. Admin panel tersedia lewat konsultasi.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap about">
+    <div class="mono" aria-hidden="true">LN</div>
+    <div>
+      <h2>Tentang saya</h2>
+      <p>Saya Labib Nashrulhaq, web developer. Saya membuat website untuk UMKM dan bisnis lokal: harga jelas, jadwal jelas, dan kontrak tertulis sebelum kerja dimulai. Kalau nanti bisnismu butuh chatbot AI untuk melayani pelanggan, itu juga bisa kita bahas lewat konsultasi.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="final">
+      <h2>Ceritakan usahamu, saya kirim penawarannya</h2>
+      <p>Konsultasi awal gratis dan tanpa kewajiban. Cukup kirim nama usaha dan paket yang kamu lirik.</p>
+      <p><a class="btn btn-wa" href="https://wa.me/6285720276493?text=Halo%20kak%20Labib%20%F0%9F%99%8F%20Saya%20sudah%20lihat%20website%20kakak%20dan%20ingin%20bertanya%20soal%20pembuatan%20website%20untuk%20usaha%20saya.%20Boleh%20dibantu%20ya%20kak%3F%20Nanti%20saya%20ceritakan%20usahanya.%20Terima%20kasih." data-wa="umum">Chat WhatsApp 0857-2027-6493</a></p>
+      <p style="margin-bottom:0">Atau email ke <a class="mail" href="mailto:labiib.nq@gmail.com">labiib.nq@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="yr">2026</span> Labib Nashrulhaq, Web Developer<br>Foto ilustrasi dari Pexels.</div></footer>
+
+<a class="fab" href="https://wa.me/6285720276493?text=Halo%20kak%20Labib%20%F0%9F%99%8F%20Saya%20sudah%20lihat%20website%20kakak%20dan%20ingin%20bertanya%20soal%20pembuatan%20website%20untuk%20usaha%20saya.%20Boleh%20dibantu%20ya%20kak%3F%20Nanti%20saya%20ceritakan%20usahanya.%20Terima%20kasih." data-wa="umum" aria-label="Chat WhatsApp">Chat WhatsApp</a>
+
+<script>
+// Ubah angka ini setiap kali ada klien baru yang DP-nya masuk.
+var SLOTS_LEFT = 10;
+(function(){
+  var end = new Date('2026-11-25T23:59:59+07:00');
+  var expired = new Date() > end || SLOTS_LEFT <= 0;
+  document.querySelectorAll('.slots').forEach(function(el){ el.textContent = SLOTS_LEFT; });
+  var y = document.getElementById('yr'); if (y) y.textContent = new Date().getFullYear();
+  if (expired) {
+    document.documentElement.classList.add('expired');
+    document.querySelectorAll('.price').forEach(function(el){ el.textContent = el.getAttribute('data-n'); });
+  }
+})();
+</script>
+<dialog id="demoDlg" aria-label="Pratinjau contoh desain">
+  <div class="dbar">
+    <strong id="dTitle">Contoh desain</strong>
+    <div class="dsw" role="group" aria-label="Ukuran layar"><button type="button" data-w="desktop" aria-pressed="true">Desktop</button><button type="button" data-w="mobile" aria-pressed="false">HP</button></div>
+    <a class="btn btn-wa" id="dWa" href="#" target="_blank" rel="noopener">Mau yang seperti ini?</a>
+    <button type="button" class="dx" id="dClose">Tutup</button>
+  </div>
+  <div class="dview"><div class="dframe"><iframe id="dIf" title="Pratinjau contoh desain" loading="lazy"></iframe></div></div>
+</dialog>
+<script>
+(function(){
+  var dlg=document.getElementById("demoDlg"),f=document.getElementById("dIf"),view=dlg.querySelector(".dview");
+  function mode(m){view.classList.toggle("m",m==="mobile");dlg.querySelectorAll("[data-w]").forEach(function(x){x.setAttribute("aria-pressed",String(x.dataset.w===m))})}
+  dlg.querySelectorAll("[data-w]").forEach(function(x){x.addEventListener("click",function(){mode(x.dataset.w)})});
+  document.querySelectorAll("[data-demo]").forEach(function(b){b.addEventListener("click",function(){
+    document.getElementById("dTitle").textContent="Contoh desain: "+b.dataset.title;
+    var salam=window.salamWaktu?window.salamWaktu():"Halo";
+    document.getElementById("dWa").href="https://wa.me/6285720276493?text="+encodeURIComponent(salam+" kak Labib 🙏 Saya sudah lihat contoh desain "+b.dataset.title+" di website kakak dan tertarik dibuatkan yang serupa untuk usaha saya. Boleh minta info paket dan estimasi waktunya ya kak? Terima kasih.");
+    mode("desktop");f.src=b.dataset.demo;
+    if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");
+    document.documentElement.classList.add("lock");
+  })});
+  function tutup(){if(dlg.close)dlg.close();else dlg.removeAttribute("open")}
+  document.getElementById("dClose").addEventListener("click",tutup);
+  dlg.addEventListener("close",function(){f.src="about:blank";document.documentElement.classList.remove("lock")});
+})();
+</script>
+<script>
+(function(){
+  var root=document.documentElement,hd=document.querySelector("header");
+  if(hd){var tick=false;function cek(){hd.classList.toggle("scrolled",window.scrollY>8);tick=false}
+    window.addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(cek)}},{passive:true});cek()}
+  if(!root.classList.contains("js"))return;
+  try{
+    var items=[];
+    function tandai(el,d){el.classList.add("rv");el.style.setProperty("--d",d+"ms");items.push(el)}
+    document.querySelectorAll("main section:not(.hero) h2").forEach(function(e){tandai(e,0)});
+    document.querySelectorAll("main section:not(.hero) .wrap > p").forEach(function(e){tandai(e,90)});
+    [".pts > div",".chips .chip",".demos > .demo",".pk > .pkg",".steps > li",".terms > li","#faq details"].forEach(function(sel){
+      var n=new Map();
+      document.querySelectorAll(sel).forEach(function(e){var p=e.parentNode,i=n.get(p)||0;n.set(p,i+1);tandai(e,Math.min(i,5)*90+120)});
+    });
+    [".note",".about",".final"].forEach(function(sel){document.querySelectorAll(sel).forEach(function(e){tandai(e,0)})});
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){
+      if(!en.isIntersecting)return;
+      var el=en.target;el.classList.add("in");io.unobserve(el);
+      var d=parseInt(el.style.getPropertyValue("--d"))||0;
+      setTimeout(function(){el.classList.remove("rv","in");el.style.removeProperty("--d")},d+900);
+    })},{threshold:.12,rootMargin:"0px 0px -6% 0px"});
+    items.forEach(function(e){io.observe(e)});
+  }catch(err){root.classList.remove("js")}
+})();
+</script>
+<script>
+(function(){
+  var NO="6285720276493",habis=document.documentElement.classList.contains("expired");
+  function salam(){var h=new Date().getHours();return h<4?"Selamat malam":h<11?"Selamat pagi":h<15?"Selamat siang":h<18?"Selamat sore":"Selamat malam"}
+  window.salamWaktu=salam;
+  var PK={lp:["paket Landing Page","Rp 499.000"],cp:["paket Company Profile","Rp 1.290.000"],kat:["paket Katalog/Properti","Rp 2.490.000"]};
+  function pesan(k){
+    var s=salam()+" kak Labib 🙏 ";
+    if(k==="konsul")return s+"Saya ingin berkonsultasi untuk website yang lebih lengkap (misalnya toko online, admin panel, atau chatbot AI). Boleh dibantu ya kak? Nanti saya jelaskan kebutuhannya. Terima kasih.";
+    if(PK[k])return s+"Saya tertarik dengan "+PK[k][0]+(habis?"":" (promo "+PK[k][1]+")")+" yang ada di website. Boleh minta info lebih lanjut dan cara pemesanannya ya kak? Nanti saya ceritakan usaha saya. Terima kasih.";
+    return s+"Saya sudah lihat website kakak dan ingin bertanya soal pembuatan website untuk usaha saya. Boleh dibantu ya kak? Nanti saya ceritakan usahanya. Terima kasih.";
+  }
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href="https://wa.me/"+NO+"?text="+encodeURIComponent(pesan(a.dataset.wa));
+  });
+})();
+</script>
+</body>
+</html>

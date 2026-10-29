@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dapur Nusantara – Rumah makan Padang, pesan lewat WhatsApp</title>
+<meta name="description" content="Masakan Padang rumahan yang dimasak segar setiap hari. Lihat menu, pilih pesanan, dan kirim lewat WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--brown:#2b1a12;--tur:#f6b21a;--chili:#cf2e1b;--soft:#fff3d1;--muted:#6b5a50;--line:#eadfce}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--brown);background:#fffefb;line-height:1.6;font-size:17px;padding-bottom:84px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+h2{font-size:clamp(2rem,5vw,3.1rem)}
+p{margin:0 0 1em}
+.btn{display:inline-block;background:var(--brown);color:var(--tur);font-weight:800;text-decoration:none;padding:15px 26px;border-radius:99px;border:2px solid var(--brown);cursor:pointer;font:inherit;font-weight:800}
+.btn:hover{background:#000}
+.btn.o{background:transparent;color:var(--brown)}
+.btn.o:hover{background:var(--brown);color:var(--tur)}
+.btn.red{background:var(--chili);border-color:var(--chili);color:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--chili);outline-offset:2px}
+/* bar contoh desain: hapus saat diserahkan ke klien */
+.demo{background:var(--brown);color:#fff;text-align:center;font-size:.85rem;font-weight:600;padding:7px 12px}
+.demo a{color:var(--tur);text-decoration:underline}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,254,251,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nb{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+.logo{font-family:"DM Serif Display",serif;font-size:1.5rem;text-decoration:none}
+.nav nav{display:flex;gap:26px}
+.nav nav a{text-decoration:none;font-weight:700;font-size:.95rem}
+.nav .btn{padding:9px 20px;font-size:.92rem}
+.hero{position:relative;color:#fff;overflow:hidden;background:#2b1a12 url("https://images.pexels.com/photos/37065735/pexels-photo-37065735.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(43,26,18,.88) 6%,rgba(43,26,18,.5) 55%,rgba(43,26,18,.15))}
+.hero .btn{background:var(--tur);border-color:var(--tur);color:var(--brown)}
+.hero .btn:hover{background:#ffc83d}
+.hero .btn.o{background:transparent;color:#fff;border-color:#fff}
+.hero .btn.o:hover{background:#fff;color:var(--brown)}
+.hero .stamp{left:auto;right:20px;bottom:44px}
+.hero .wrap{position:relative;padding-top:120px;padding-bottom:120px}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.8rem)}
+.hero p{font-size:1.15rem;max-width:42ch;margin:20px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.arch{position:relative;align-self:end}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 0 0;background:#e69b00}
+.stamp{position:absolute;left:-18px;bottom:48px;width:118px;height:118px;border-radius:50%;background:var(--chili);color:#fff;display:grid;place-items:center;text-align:center;font-weight:800;font-size:.85rem;line-height:1.25;transform:rotate(-10deg);box-shadow:0 10px 24px -10px rgba(0,0,0,.5)}
+.stamp b{display:block;font-family:"DM Serif Display",serif;font-weight:400;font-size:1.35rem}
+.belt{background:var(--brown);color:var(--tur);overflow:hidden;white-space:nowrap;padding:14px 0;font-family:"DM Serif Display",serif;font-size:1.3rem}
+.belt div{display:inline-flex;animation:run 28s linear infinite}
+.belt span{padding:0 26px;position:relative}
+.belt span::after{content:"";position:absolute;right:-4px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--chili)}
+@keyframes run{to{transform:translateX(-50%)}}
+section{padding:80px 0}
+.sub{color:var(--muted);max-width:52ch;margin-top:14px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:34px}
+.card{text-decoration:none;display:block}
+.card .im{aspect-ratio:16/10;border-radius:22px 22px 90px 22px;overflow:hidden;background:var(--soft)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card:hover img{transform:scale(1.05)}
+.card h3{font-size:1.6rem;margin:14px 0 4px}
+.card p{color:var(--muted);margin:0}
+.band{position:relative;color:#fff;padding:90px 0;background:#2b1a12 url("https://images.pexels.com/photos/40020696/pexels-photo-40020696.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover}
+.band::before{content:"";position:absolute;inset:0;background:rgba(43,26,18,.84)}
+.band .wrap{position:relative}
+.band h2{color:var(--tur)}
+.pts{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.pts div{border-top:3px solid var(--tur);padding-top:14px}
+.pts h3{font-size:1.4rem}
+.pts p{opacity:.85;margin:6px 0 0}
+.menu{background:var(--soft)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0}
+.tabs button{font:inherit;font-weight:800;padding:9px 20px;border-radius:99px;border:2px solid var(--brown);background:transparent;color:var(--brown);cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--brown);color:var(--tur)}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.item{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.item .t{flex:1}
+.item b{display:block;font-size:1.05rem}
+.item small{color:var(--muted)}
+.item .pr{font-weight:800;color:var(--chili);white-space:nowrap}
+.step{display:flex;align-items:center;gap:8px}
+.step button{width:34px;height:34px;border-radius:50%;border:2px solid var(--brown);background:#fff;font-size:1.2rem;line-height:1;cursor:pointer;color:var(--brown);font-weight:800}
+.step button.p{background:var(--brown);color:var(--tur)}
+.step span{min-width:18px;text-align:center;font-weight:800}
+.note{margin-top:22px;display:grid;gap:6px;font-weight:700;max-width:620px}
+.note input{font:inherit;padding:13px 14px;border:2px solid var(--line);border-radius:12px;width:100%;background:#fff}
+.small{font-size:.85rem;color:var(--muted);margin-top:12px}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+table{border-collapse:collapse;width:100%}
+td{padding:10px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:800}
+footer{background:var(--brown);color:#cdb9a8;text-align:center;padding:30px 20px;font-size:.9rem}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;max-width:760px;margin:0 auto;background:var(--brown);color:#fff;border-radius:99px;padding:10px 10px 10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 16px 36px -14px rgba(0,0,0,.6);transform:translateY(140%);transition:transform .25s}
+.bar.on{transform:none}
+.bar b{color:var(--tur)}
+.mos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:12px;margin-top:30px}
+.mos img{width:100%;height:100%;object-fit:cover;border-radius:16px;background:var(--soft);display:block}
+.mos .big{grid-column:span 2;grid-row:span 2}.mos .wide{grid-column:span 2}
+.chips{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{border:2px solid var(--brown);border-radius:99px;padding:6px 16px;font-weight:800;font-size:.92rem}
+.map{margin-top:40px;border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/7;background:var(--soft)}
+.map iframe{width:100%;height:100%;border:0;display:block}
+@media (max-width:860px){
+ .hero .wrap,.info{grid-template-columns:1fr;gap:32px}
+ .arch{max-width:420px;margin:0 auto;width:100%}
+ .stamp{left:0}
+ .cards,.pts{grid-template-columns:1fr}
+ .list{grid-template-columns:1fr}
+ .nav nav{display:none}
+ section{padding:60px 0}
+ .band{padding:64px 0}
+}
+@media (max-width:860px){.mos{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.hero .wrap{padding-top:80px;padding-bottom:80px}.hero .stamp{display:none}.map{aspect-ratio:4/3}}
+@media (max-width:480px){.item{flex-wrap:wrap}.bar{padding-left:18px;font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.belt div{animation:none}.card img,.bar{transition:none}}
+</style>
+</head>
+<body id="atas">
+<div class="demo">Contoh desain website rumah makan oleh Labib Nashrulhaq. <a href="#" data-wa2="Halo kak Labib 🙏 Saya sudah lihat contoh desain rumah makan dan tertarik dibuatkan website yang serupa untuk usaha saya. Boleh minta info paket dan estimasi waktunya ya kak? Terima kasih.">Mau website seperti ini?</a></div>
+
+<header class="nav"><div class="wrap nb">
+  <a class="logo" href="#atas" data-nama>Dapur Nusantara</a>
+  <nav aria-label="Menu"><a href="#andalan">Menu andalan</a><a href="#menu">Pesan</a><a href="#lokasi">Lokasi</a></nav>
+  <a class="btn" href="#menu">Pesan sekarang</a>
+</div></header>
+
+<main>
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <h1 style="max-width:14ch">Masakan Padang rumahan, hangat seperti di meja ibu.</h1>
+    <p>Rendang, gulai, dan sambal yang dimasak setiap hari dengan bumbu segar. Pesan untuk makan di tempat, bungkus, atau antar.</p>
+    <div class="cta"><a class="btn" href="#menu">Pesan sekarang</a><a class="btn o" href="#andalan">Lihat menu andalan</a></div>
+    <div class="stamp"><div>Buka<b>08.00–21.00</b>setiap hari</div></div>
+  </div>
+</section>
+<div class="belt" aria-hidden="true"><div>
+  <span>Rendang Daging</span><span>Gulai Ayam</span><span>Sambal Hijau</span><span>Ayam Pop</span><span>Telur Balado</span><span>Daun Singkong</span>
+  <span>Rendang Daging</span><span>Gulai Ayam</span><span>Sambal Hijau</span><span>Ayam Pop</span><span>Telur Balado</span><span>Daun Singkong</span>
+</div></div>
+
+<section id="andalan">
+  <div class="wrap">
+    <h2>Menu andalan</h2>
+    <p class="sub">Aneka lauk khas Padang yang paling sering dipesan. Ganti foto dengan foto asli menu usaha klien.</p>
+    <div class="mos" role="group" aria-label="Foto hidangan">
+      <img class="big" src="https://images.pexels.com/photos/37339493/pexels-photo-37339493.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Nasi Padang dengan rendang dan lauk pendamping" loading="lazy" onerror="this.style.visibility='hidden'">
+      <img src="https://images.pexels.com/photos/37066375/pexels-photo-37066375.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Rendang daging dengan irisan cabai" loading="lazy" onerror="this.style.visibility='hidden'">
+      <img src="https://images.pexels.com/photos/37249196/pexels-photo-37249196.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Rendang di atas daun pisang" loading="lazy" onerror="this.style.visibility='hidden'">
+      <img class="wide" src="https://images.pexels.com/photos/37073155/pexels-photo-37073155.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Aneka hidangan Indonesia di meja kayu" loading="lazy" onerror="this.style.visibility='hidden'">
+      <img src="https://images.pexels.com/photos/37081081/pexels-photo-37081081.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Sepiring nasi Padang dengan telur dan sayur" loading="lazy" onerror="this.style.visibility='hidden'">
+      <img src="https://images.pexels.com/photos/37080534/pexels-photo-37080534.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Rendang daging yang kaya bumbu" loading="lazy" onerror="this.style.visibility='hidden'">
+      <img class="wide" src="https://images.pexels.com/photos/37068399/pexels-photo-37068399.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Hidangan sate, sambal, dan nasi" loading="lazy" onerror="this.style.visibility='hidden'">
+    </div>
+    <ul class="chips"><li>Rendang Daging</li><li>Gulai Ayam</li><li>Ayam Pop</li><li>Dendeng Balado</li><li>Telur Balado</li><li>Gulai Ikan</li><li>Daun Singkong</li><li>Sambal Hijau</li></ul>
+    <p style="margin-top:26px"><a class="btn" href="#menu">Lihat daftar dan pesan</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Dimasak segar, dihidangkan hangat</h2>
+    <!-- EDIT: sesuaikan tiga poin dengan keunggulan usaha klien -->
+    <div class="pts"><div><h3>Bumbu segar</h3><p>Rempah diracik setiap hari, bukan stok lama.</p></div><div><h3>Dimasak setiap hari</h3><p>Lauk dihidangkan saat masih hangat.</p></div><div><h3>Porsi pas di kantong</h3><p>Harga jelas, tanpa biaya tersembunyi.</p></div></div>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <div class="wrap">
+    <h2>Pilih pesananmu</h2>
+    <p class="sub">Tambah item, lalu kirim pesanan ke WhatsApp dalam satu pesan yang sudah tersusun rapi.</p>
+    <div class="tabs" id="tabs" role="group" aria-label="Kategori menu"></div>
+    <div class="list" id="list"></div>
+    <label class="note">Nama, alamat antar, atau catatan<input id="cat" placeholder="Contoh: Budi, antar ke Jl. Mawar 5, sambal dipisah"></label>
+    <p class="small">Harga contoh dan dapat berubah. Pesanan dikonfirmasi lewat WhatsApp.</p>
+  </div>
+</section>
+
+<section id="lokasi">
+  <div class="wrap info">
+    <div>
+      <h2>Datang atau pesan antar</h2>
+      <p class="sub" data-alamat>Jl. Contoh No. 12, Jakarta Selatan</p>
+      <p style="margin-top:22px"><a class="btn red" href="#" id="maps" target="_blank" rel="noopener">Buka di Google Maps</a></p>
+    </div>
+    <div>
+      <h3 style="font-size:1.6rem;margin-bottom:10px">Jam buka</h3>
+      <table>
+        <tr><td>Senin sampai Jumat</td><td>08.00–21.00</td></tr>
+        <tr><td>Sabtu dan Minggu</td><td>08.00–22.00</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="wrap"><div class="map"><iframe id="peta" title="Peta lokasi rumah makan" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></div>
+</section>
+</main>
+
+<footer>© <span id="yr">2026</span> <span data-nama>Dapur Nusantara</span>. Masakan dibuat segar setiap hari.</footer>
+
+<div class="bar" id="bar" role="status"><span><b id="cnt">0</b> item, <b id="tot">Rp 0</b></span><button class="btn red" id="kirim" type="button">Pesan via WhatsApp</button></div>
+
+<script>
+/* EDIT BAGIAN INI untuk klien: nama, nomor WhatsApp (format 62...), alamat, dan daftar menu */
+var C={nama:"Dapur Nusantara",wa:"6285720276493",alamat:"Jl. Contoh No. 12, Jakarta Pusat",peta:"Monas, Jakarta Pusat"}; /* peta: ganti dengan alamat asli usaha, contoh "Jl. Mawar 5, Bandung" */
+var M=[
+ {n:"Nasi Rendang",d:"Rendang daging, sayur, sambal",p:32000,c:"Makanan"},
+ {n:"Nasi Ayam Pop",d:"Ayam pop, sayur, sambal hijau",p:28000,c:"Makanan"},
+ {n:"Nasi Gulai Ikan",d:"Gulai ikan, daun singkong",p:30000,c:"Makanan"},
+ {n:"Nasi Dendeng Balado",d:"Dendeng balado, sayur, sambal",p:31000,c:"Makanan"},
+ {n:"Telur Balado",d:"Per butir",p:6000,c:"Makanan"},
+ {n:"Paket Hemat",d:"Nasi, ayam, sayur, es teh",p:35000,c:"Paket"},
+ {n:"Paket Keluarga",d:"Untuk 4 orang, 4 lauk pilihan",p:135000,c:"Paket"},
+ {n:"Es Teh Manis",d:"",p:6000,c:"Minuman"},
+ {n:"Es Jeruk",d:"",p:10000,c:"Minuman"},
+ {n:"Teh Talua",d:"Teh telur khas Minang",p:15000,c:"Minuman"},
+ {n:"Kopi Hitam",d:"",p:8000,c:"Minuman"}
+];
+var rp=function(n){return "Rp "+new Intl.NumberFormat("id-ID").format(n)};
+var q={},cat="Semua";
+document.querySelectorAll("[data-nama]").forEach(function(e){e.textContent=C.nama});
+document.querySelectorAll("[data-alamat]").forEach(function(e){e.textContent=C.alamat});
+document.querySelectorAll("[data-wa2]").forEach(function(a){a.href="https://wa.me/6285720276493?text="+encodeURIComponent(a.dataset.wa2);a.target="_blank";a.rel="noopener"});
+document.getElementById("maps").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(C.peta);
+document.getElementById("peta").src="https://www.google.com/maps?q="+encodeURIComponent(C.peta)+"&output=embed";
+document.getElementById("yr").textContent=new Date().getFullYear();
+function tabs(){
+  var t=document.getElementById("tabs");t.innerHTML="";
+  ["Semua"].concat(M.map(function(m){return m.c}).filter(function(v,i,a){return a.indexOf(v)===i})).forEach(function(c){
+    var b=document.createElement("button");b.type="button";b.textContent=c;b.setAttribute("aria-pressed",c===cat);
+    b.onclick=function(){cat=c;tabs();list()};t.appendChild(b)});
+}
+function list(){
+  var l=document.getElementById("list");l.innerHTML="";
+  M.forEach(function(m,i){
+    if(cat!=="Semua"&&m.c!==cat)return;
+    var d=document.createElement("div");d.className="item";
+    d.innerHTML='<div class="t"><b>'+m.n+'</b>'+(m.d?'<small>'+m.d+'</small>':'')+'</div><span class="pr">'+rp(m.p)+'</span><div class="step"><button type="button" aria-label="Kurangi '+m.n+'" data-i="'+i+'" data-d="-1">–</button><span>'+(q[i]||0)+'</span><button type="button" class="p" aria-label="Tambah '+m.n+'" data-i="'+i+'" data-d="1">+</button></div>';
+    l.appendChild(d)});
+}
+document.getElementById("list").addEventListener("click",function(e){
+  var b=e.target.closest("button[data-i]");if(!b)return;
+  var i=b.dataset.i;q[i]=Math.max(0,(q[i]||0)+Number(b.dataset.d));list();bar();
+});
+function bar(){
+  var n=0,t=0;M.forEach(function(m,i){var k=q[i]||0;n+=k;t+=k*m.p});
+  document.getElementById("cnt").textContent=n;document.getElementById("tot").textContent=rp(t);
+  document.getElementById("bar").classList.toggle("on",n>0);
+}
+document.getElementById("kirim").onclick=function(){
+  var s="Halo "+C.nama+", saya mau pesan:\n",t=0;
+  M.forEach(function(m,i){var k=q[i]||0;if(k){s+="- "+k+"x "+m.n+" ("+rp(k*m.p)+")\n";t+=k*m.p}});
+  s+="Total: "+rp(t);var c=document.getElementById("cat").value.trim();if(c)s+="\nCatatan: "+c;
+  window.open("https://wa.me/"+C.wa+"?text="+encodeURIComponent(s),"_blank","noopener");
+};
+tabs();list();
+</script>
+</body>
+</html>
